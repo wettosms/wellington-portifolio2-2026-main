@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --corPrincipal: #22D4FD;
+    --corSecundaria: #000;
+    --corTerciaria: #F6F6F6;
+
+    --fontePrincipal: "Montserrat", sans-serif;
+    --fonteSecundaria: "Krona One", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    zoom: 100%;
+}
+
+body {
+    background-color: var(--corSecundaria);
+    color: var(--corTerciaria);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: var(--corSecundaria);
+    padding: 2% 5% 0% 5%;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.cabecalho-logo {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.cabecalho-logo img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.cabecalho-link {
+    color: var(--corPrincipal);
+    font-family: var(--fontePrincipal);
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tecnologias {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.tecnologias svg {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    color: var(--corPrincipal);
+}
+
+.tecnologias img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    object-fit: contain;
+}
+
+.tecnologias svg[aria-label="React"] {
+    color: #61DAFB;
+}
+
+.tecnologias svg[aria-label="HTML5"] {
+    color: #E34F26;
+}
+
+.tecnologias svg[aria-label="CSS3"] {
+    color: #1572B6;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    padding: 5% 15%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+/* TEXTO */
+
+.container-texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container-texto-titulo {
+    font-family: var(--fonteSecundaria);
+    color: var(--corTerciaria);
+    font-size: 32px;
+}
+
+.container-titulo-destaque {
+    color: var(--corPrincipal);
+}
+
+.container-texto-paragrafo {
+    font-family: var(--fontePrincipal);
+    color: var(--corTerciaria);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.curso-ia {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.curso-ia svg {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    color: var(--corPrincipal);
+}
+
+/* LINKS */
+
+.container-texto-link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.container-texto-link-link {
+    width: 220px;
+    background-color: transparent;
+    border: solid 1px var(--corPrincipal);
+    border-radius: 4px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--corTerciaria);
+    font-size: 16px;
+    font-family: var(--fontePrincipal);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.container-texto-link-link svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+}
+
+/* FOTO */
+
+.container-foto {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-projeto {
+    border-radius: 50%;
+}
+
+/* RODAPÉ */
+
+footer {
+    color: var(--corSecundaria);
+    background-color: var(--corPrincipal);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fontePrincipal);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 5%;
+    }
+
+    .cabecalho {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    main {
+        padding: 10% 5%;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .container-texto {
+        width: 100%;
+    }
+
+    .container-foto {
+        width: 100%;
+    }
+
+    .container-foto img {
+        width: 100%;
+    }
+
+    .container-texto-titulo {
+        font-size: 24px;
+    }
+
+    .container-texto-link {
+        align-items: center;
+    }
+}
